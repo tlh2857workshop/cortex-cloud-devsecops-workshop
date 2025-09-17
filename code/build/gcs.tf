@@ -9,7 +9,10 @@ resource "google_storage_bucket" "example" {
   force_destroy = true
 
   uniform_bucket_level_access = false
-  public_access_prevention = "enforced"
+  public_access_prevention    = "enforced"
+  labels = {
+    yor_trace = "e9c57f3c-0083-447d-bf72-f1cd529189b2"
+  }
 }
 
 resource "random_id" "rand_suffix" {
